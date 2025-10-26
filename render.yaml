@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: stack-blocks-game
+    env: static
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /
